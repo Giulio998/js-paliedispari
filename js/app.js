@@ -1,26 +1,23 @@
-function palCheck() {
-    
-    function isPalindrome() {
-        let parola = prompt("inserisci una parola");
-        let j = parola.length - 1
-        for (let i = 0; i < parola.length / 2; i++) {
-            if (parola[i] != parola[j]) {
-                return false;
-            }
-            j--;
-        }
-        return true;
+function pal() {
+    function palChecker() {
+       let parola = prompt("inserisci una parola");
+ 
+       for (let i = 0; i < parola.length / 2; i++) {
+          if (parola[i] != parola[parola.length - (1 + i)]) {
+          return false 
+          } 
+       }
+       return true;
     }
     
-    if (isPalindrome() == true ) {
-        console.log("palindromo");
+    if (palChecker() == true) {
+       console.log("palindromo"); 
     } else {
-        console.log("non palindromo");
-    }
-    
-}
+       console.log("non palindromo");
+    } 
+ }
 
-palCheck()
+ pal()
 
 function pariDispari() {
     let evenOdd = document.getElementById("pari-dispari").value
