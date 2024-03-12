@@ -1,25 +1,22 @@
 function palCheck() {
-    let parola = prompt("inserisci una parola");
-    let pal = false
-
-    for (let i = 0; i < parola.length; i++) {
-        
-        if (parola[i] !== parola[parola.length - 1 - i]) {
-            pal = false
-            
-        } else{
-            pal = true
+    
+    function isPalindrome() {
+        let parola = prompt("inserisci una parola");
+        let j = parola.length - 1
+        for (let i = 0; i < parola.length / 2; i++) {
+            if (parola[i] != parola[j]) {
+                return false;
+            }
+            j--;
         }
-        
+        return true;
     }
-
-    if (pal == false) {
-        console.log("non palindromo");
     
-    } else {
+    if (isPalindrome() == true ) {
         console.log("palindromo");
+    } else {
+        console.log("non palindromo");
     }
-    
     
 }
 
